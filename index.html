@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Custom Dropdown</title>
 
     <link rel="stylesheet" href="style.css">
@@ -16,17 +17,65 @@
 
         <div class="dropdown">
 
-            <button class="dropdown-button" type="button">
-                <span class="dropdown-placeholder">Select an option</span>
-                <span class="dropdown-arrow">▼</span>
+            <button
+                class="dropdown-button"
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+            >
+                <span class="dropdown-placeholder">
+                    Select an option
+                </span>
+
+                <span class="dropdown-arrow" aria-hidden="true">
+                    ▼
+                </span>
             </button>
 
-            <ul class="dropdown-menu">
-                <li class="dropdown-option">Pakistan</li>
-                <li class="dropdown-option">India</li>
-                <li class="dropdown-option">Turkey</li>
-                <li class="dropdown-option">Canada</li>
-                <li class="dropdown-option">United Kingdom</li>
+            <ul
+                class="dropdown-menu"
+                role="listbox"
+                aria-label="Available options"
+            >
+                <li
+                    class="dropdown-option"
+                    role="option"
+                    data-value="Pakistan"
+                >
+                    Pakistan
+                </li>
+
+                <li
+                    class="dropdown-option"
+                    role="option"
+                    data-value="India"
+                >
+                    India
+                </li>
+
+                <li
+                    class="dropdown-option"
+                    role="option"
+                    data-value="Turkey"
+                >
+                    Turkey
+                </li>
+
+                <li
+                    class="dropdown-option"
+                    role="option"
+                    data-value="Canada"
+                >
+                    Canada
+                </li>
+
+                <li
+                    class="dropdown-option"
+                    role="option"
+                    data-value="United Kingdom"
+                >
+                    United Kingdom
+                </li>
             </ul>
 
         </div>
@@ -34,5 +83,6 @@
     </main>
 
     <script src="script.js"></script>
+
 </body>
 </html>
